@@ -1,5 +1,7 @@
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 set-window-option -g mode-keys vi
+#bind-key C-c run "tmux save-buffer - | ~/bin/reattach-to-user-namespace pbcopy"
+#bind-key C-v run "~/bin/reattach-to-user-namespace pbpaste | tmux load-buffer - && tmux paste-buffer"
 bind C-q run-shell 'reattach-to-user-namespace tmux-pbcopy'
 #bind-key > save-buffer ~/.tmux-buffer \; run-shell 'xsel -b -i < ~/.tmux-buffer' \; display-message "Copied to clipboard."
 #bind-key < if-shell 'xsel -b -o > ~/.tmux-buffer' 'load-buffer ~/.tmux-buffer ; paste-buffer'
