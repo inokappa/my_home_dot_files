@@ -1,4 +1,3 @@
-"" refer to https://github.com/ysm001/dotfiles/blob/master/.vimrc
 "" :set term=xterm-256color
 "" :syntax on
 
@@ -230,6 +229,7 @@ let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 26
+let g:NERDTreeShowHidden=1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <leader>nf :NERDTreeFind<CR>
 "" noremap <leader>n :NERDTreeToggle<CR>
@@ -239,7 +239,7 @@ noremap <silent><C-n> :NERDTreeToggle<CR>
 """ Mappings
 "*****************************************************************************
 "" Copy/Paste/Cut
-set clipboard=unnamed,unnamedplus
+set clipboard+=unnamed,unnamedplus
 
 "******************
 "" neosnippet
@@ -311,7 +311,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_mode_map = { 'mode': 'active' }
-let g:syntastic_ruby_checkers=['rubocop', 'mri']
+" let g:syntastic_ruby_checkers=['rubocop', 'mri']
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_coffee_checkers = ['coffeelint']
@@ -418,6 +418,15 @@ au FileType go setlocal makeprg=go\ build\ ./... errorformat=%f:%l:\ %m
 "" au BufWritePre *.go Fmt
 filetype plugin indent on
 syntax on
+
+"*****************************************************************************
+" markdown settings 
+"*****************************************************************************
+" Need: kannokanno/previm
+nnoremap <silent> <C-p> :PrevimOpen<CR> " Ctrl-pでプレビュー
+" 自動で折りたたまないようにする
+let g:vim_markdown_folding_disabled=1
+let g:previm_enable_realtime = 1
 
 "*****************************************************************************
 " Syntastic Config
