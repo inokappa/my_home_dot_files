@@ -209,6 +209,11 @@ autocmd FileType * setlocal formatoptions-=ro
 
 let g:vim_json_syntax_conceal=0
 
+" 削除キーで yank しない
+nnoremap x "_x
+"nnoremap d "_d
+nnoremap D "_D
+
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
@@ -427,6 +432,7 @@ nnoremap <silent> <C-p> :PrevimOpen<CR> " Ctrl-pでプレビュー
 " 自動で折りたたまないようにする
 let g:vim_markdown_folding_disabled=1
 let g:previm_enable_realtime = 1
+let g:vim_markdown_conceal = 0
 
 "*****************************************************************************
 " Syntastic Config
