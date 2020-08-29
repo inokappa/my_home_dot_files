@@ -158,6 +158,9 @@ NeoBundle 'hashivim/vim-terraform'
 NeoBundle 'vim-syntastic/syntastic'
 NeoBundle 'juliosueiras/vim-terraform-completion'
 
+"" Auto Save
+NeoBundle 'vim-scripts/vim-auto-save'
+
 call neobundle#end()
 
 " Required:
@@ -219,7 +222,8 @@ nnoremap D "_D
 "*****************************************************************************
 syntax enable
 set background=dark
-colorscheme solarized
+"" colorscheme solarized
+colorscheme koehler
 set number
 set ruler
 
@@ -433,6 +437,11 @@ nnoremap <silent> <C-p> :PrevimOpen<CR> " Ctrl-pでプレビュー
 let g:vim_markdown_folding_disabled=1
 let g:previm_enable_realtime = 1
 let g:vim_markdown_conceal = 0
+
+"*****************************************************************************
+" auto save settings 
+"*****************************************************************************
+" let g:auto_save = 1
 
 "*****************************************************************************
 " Syntastic Config

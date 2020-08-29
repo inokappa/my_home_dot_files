@@ -10,7 +10,7 @@ eval "$(direnv hook bash)"
 # For rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-export GOPATH=${HOME}/golang
+export GOPATH=${HOME}/Documents/golang
 export PATH=${PATH}:${GOROOT}/bin:${GOPATH}/bin:${HOME}/bin
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
